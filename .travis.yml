@@ -9,9 +9,9 @@ cache:
   directories:
     - $HOME/Library/Caches/Homebrew
 before_script:
-  - brew tap facebook/fb
-  - brew install buck watchman
-  - buck --version
   - java -version
+  - brew tap facebook/fb
+  - brew install buck
+  - buck --version
 script:
   - buck test --all

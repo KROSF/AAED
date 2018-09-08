@@ -1,0 +1,6 @@
+cxx_test(
+  name = 'practica_2_test',
+  srcs = [
+    'test_practica_2.cpp',
+  ],
+)

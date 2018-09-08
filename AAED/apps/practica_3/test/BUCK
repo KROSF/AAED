@@ -1,0 +1,12 @@
+cxx_test(
+  name = 'practica_3_test',
+  srcs = [
+    'test_practica_3.cpp',
+  ],
+  deps = [
+    '//AAED/apps/practica_3:sortutils',
+  ],
+  visibility = [
+    '//...',
+  ],
+)

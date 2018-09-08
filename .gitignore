@@ -45,6 +45,7 @@ Temporary Items
 # Compiled Dynamic libraries
 *.so
 *.dylib
+*.dSYM
 *.dll
 
 # Fortran module files
@@ -68,4 +69,7 @@ buck-out/
 .buckd/
 .buckversion
 .fakebuckversion
+
+### buckaroo ###
+buckaroo
 BUCKAROO_DEPS

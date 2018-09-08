@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 
+const int _10M_ = 10000000;
 //* Ejercicio 1
 /**
  * @brief Genera un número pseudoaleatorio entero 

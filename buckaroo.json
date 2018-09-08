@@ -1,3 +1,6 @@
 {
-  "name": "AAED"
+  "name": "AAED",
+  "dependencies": {
+    "google/gtest": "1.8.0"
+  }
 }

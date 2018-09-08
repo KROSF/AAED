@@ -1,0 +1,25 @@
+cxx_test(
+  name = 'polinomio_test',
+  srcs = [
+    'polinomio_test.cpp',
+  ],
+  deps = [
+    '//AAED/apps/practica_4:mathutils',
+  ],
+  visibility = [
+    '//...',
+  ],
+)
+
+cxx_test(
+  name = 'racional_test',
+  srcs = [
+    'racional_test.cpp',
+  ],
+   deps = [
+    '//AAED/apps/practica_4:mathutils',
+  ],
+  visibility = [
+    '//...',
+  ],
+)

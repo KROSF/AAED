@@ -1,0 +1,27 @@
+cxx_library(
+  name = 'mathutils',
+  header_namespace = 'math',
+  srcs = [
+    'src/racional.cpp',
+    'src/polinomio.cpp',
+  ],
+  exported_headers = {
+    'racional.hpp': 'include/racional.hpp',
+    'polinomio.hpp':'include/polinomio.hpp',
+  },
+  visibility = [
+    'PUBLIC',
+  ],
+)
+
+cxx_binary(
+  name = 'practica_4',
+  srcs = ['src/main.cpp'],
+  deps = [
+    ':mathutils',
+  ],
+  visibility = [
+    'PUBLIC',
+  ],
+)
+

@@ -1,0 +1,22 @@
+cxx_library(
+  name = 'sortutils',
+  header_namespace = 'sort',
+  exported_headers = {
+    'cronometro.hpp': 'include/cronometro.hpp',
+    'sorting.hpp':'include/sorting.hpp',
+  },
+  visibility = [
+    'PUBLIC',
+  ],
+)
+
+cxx_binary(
+  name = 'practica_3',
+  srcs = ['src/main.cpp'],
+  deps = [
+    '//AAED/apps/practica_3:sortutils',
+  ],
+  visibility = [
+    'PUBLIC',
+  ]
+)

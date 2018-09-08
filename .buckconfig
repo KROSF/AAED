@@ -1,0 +1,7 @@
+[alias]
+  practica_2 = //AAED/apps/practica_2:practica_2
+  practica_3 = //AAED/apps/practica_3:practica_3
+  practica_4 = //AAED/apps/practica_4:practica_4
+[cxx]
+  cxxflags = -std=c++14 -g -O3 -pedantic -Wall -Wextra
+  gtest_dep = //buckaroo/official/google/gtest:gtest

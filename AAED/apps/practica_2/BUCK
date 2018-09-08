@@ -1,0 +1,7 @@
+cxx_binary(
+  name = 'practica_2',
+  headers = ['include/funciones.hpp',
+  ],
+  srcs = ['src/main.cpp'],
+  visibility = ['PUBLIC']
+)

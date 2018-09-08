@@ -71,5 +71,4 @@ buck-out/
 .fakebuckversion
 
 ### buckaroo ###
-buckaroo
 BUCKAROO_DEPS

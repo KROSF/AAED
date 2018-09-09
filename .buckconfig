@@ -5,3 +5,5 @@
 [cxx]
   cxxflags = -std=c++14 -g -O3 -pedantic -Wall -Wextra
   gtest_dep = //buckaroo/official/google/gtest:gtest
+[repositories]
+  google.gtest = buckaroo/official/google/gtest

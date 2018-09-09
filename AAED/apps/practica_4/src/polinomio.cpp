@@ -6,7 +6,7 @@ Polinomio::Polinomio(std::string str,unsigned grd):data(std::vector<double>(grd+
     size_t pos = 0;
     std::string::size_type sz;
     while((pos = str.find('+')) != std::string::npos){
-        sscanf(str.substr(0, pos).c_str(),"%lfx^%d",&coef,&grds);
+        sscanf(str.substr(0, pos).c_str(),"%lfx^%u",&coef,&grds);
         data[grds] = coef;
         str.erase(0, pos + 1);
     }

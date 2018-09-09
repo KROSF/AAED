@@ -31,7 +31,7 @@ Racional::Racional(long n,long d):n_(n),d_(d){
             d = -d;
         }
         // Reducir fracción
-        long m = mcd(abs(n), d);
+        long m = mcd(std::abs(n), d);
         if (m != 1) {
             n /= m;
             d /= m;
@@ -73,8 +73,8 @@ Racional& Racional::operator-=(const Racional& r){
 }
 Racional& Racional::operator*=(const Racional& s){
     if (this->n_ && s.n_) {
-        long a = Racional::mcd(abs(this->n_), s.d_);
-        long b = Racional::mcd(this->d_, abs(s.n_));
+        long a = Racional::mcd(std::abs(this->n_), s.d_);
+        long b = Racional::mcd(this->d_, std::abs(s.n_));
         this->n_ = (this->n_ / a) * (s.n_ / b);
         this->d_ = (this->d_ / b) * (s.d_ / a);
     }

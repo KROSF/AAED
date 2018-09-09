@@ -1,5 +1,6 @@
 #ifndef FUNCIONES_HPP
 #define FUNCIONES_HPP
+#include <algorithm>
 #include <cmath>
 #include <cstdlib>
 #include <iostream>

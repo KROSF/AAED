@@ -72,3 +72,4 @@ buck-out/
 
 ### buckaroo ###
 #BUCKAROO_DEPS
+.dockerfile

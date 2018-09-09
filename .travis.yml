@@ -1,14 +1,25 @@
-os : osx
-osx_image: xcode9.3
-compiler: clang
-language: cpp
-cache: 
-  directories:
-    - $HOME/Library/Caches/Homebrew
-before_script:
-  - java -version
-  - brew tap facebook/fb
-  - brew install buck
-  - buck --version
-script:
-  - buck test --all
+matrix:
+  include:
+    - os : osx
+      osx_image: xcode9.3
+      compiler: clang
+      language: cpp
+      cache: 
+        directories:
+          - $HOME/Library/Caches/Homebrew
+      before_script:
+        - java -version
+        - brew tap facebook/fb
+        - brew install buck
+        - buck --version
+      script:
+        - buck test --all
+    - os: linux
+      sudo: required
+      language: ruby
+      services:
+        - docker
+      before_install:
+        - docker pull krosf/buck-docker
+      script:
+        - docker run krosf/buck-docker /bin/sh -c "git clone https://github.com/KROSF/AAED.git; cd AAED;buck test --all"

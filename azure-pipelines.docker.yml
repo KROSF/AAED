@@ -1,0 +1,7 @@
+pool:
+  vmImage: 'Ubuntu 16.04'
+steps:
+- script: docker pull krosf/buck-docker
+  displayName: 'pull krosf/buck-docker'
+- script: docker run krosf/buck-docker /bin/sh -c "git clone https://github.com/KROSF/AAED.git; cd AAED;buck test --all"
+  displayName: 'run test inside docker'
